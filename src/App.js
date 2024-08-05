@@ -37,7 +37,7 @@ function App() {
     search();
   }, []);
 
-  if (loaded) {
+  // if (loaded) {
     return (
       <div className="App">
         <Header />
@@ -48,9 +48,10 @@ function App() {
         <Footer />
       </div>
     );
-  } else {
-  
-    return "Loading...";
-  }
+  // } else {
+    // search();
+    
+    // return "Loading...";
+  // }
 }
 export default App;
