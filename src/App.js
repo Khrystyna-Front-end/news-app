@@ -14,16 +14,17 @@ function App() {
   function showNews(response) {
     console.log(response);
     console.log(response.data.articles);
-    setNews({
-      title: response.data.articles.title,
-      author: response.data.articles.author,
-      source: response.data.articles.source,
-      url: response.data.articles.url,
-      urlToImage: response.data.articles.urlToImage,
-      publishedAt: response.data.articles.publishedAt,
-      date: new Date(response.data.time * 1000),
-      description: response.data.articles.description,
-    });
+   setNews(response.data.articles);
+    // setNews({
+    //   title: response.data.articles.title,
+    //   author: response.data.articles.author,
+    //   source: response.data.articles.source,
+    //   url: response.data.articles.url,
+    //   urlToImage: response.data.articles.urlToImage,
+    //   publishedAt: response.data.articles.publishedAt,
+    //   date: new Date(response.data.time * 1000),
+    //   description: response.data.articles.description,
+    // });
 
     setLoaded(true);
   }
@@ -42,7 +43,7 @@ function App() {
       <div className="App">
         <Header />
         <CurrentDateTime date={new Date()} />
-        <FormSearch newsData={news} />
+        {/* <FormSearch newsData={news} /> */}
         <News dailyNews={news} />
 
         <Footer />
