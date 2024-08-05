@@ -40,11 +40,12 @@ function App() {
 
        axios
          .get(apiUrl, options)
-         .then((response) => {
-           // Handle successful response
-           console.log(response.data);
-         })
          .then(showNews)
+        //  .then((response) => {
+           // Handle successful response
+          //  console.log(response.data);
+        //  })
+        //  .then(showNews)
          .catch((error) => {
            // Handle error
            console.error(error);
