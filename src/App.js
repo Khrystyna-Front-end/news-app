@@ -32,8 +32,24 @@ function App() {
   function search() {
     let apiKey = "9de3a519457048fd86c3f2e3c8d2ebd0";
     let apiUrl = `https://newsapi.org/v2/top-headlines?country=ua&apiKey=${apiKey}`;
-    
-    axios.get(apiUrl).then(showNews);
+       
+       const options = {
+         httpVersion: "HTTP/2.0",
+         // Add other request options as needed
+       };
+
+       axios
+         .get(apiUrl, options)
+         .then((response) => {
+           // Handle successful response
+           console.log(response.data);
+         })
+         .then(showNews)
+         .catch((error) => {
+           // Handle error
+           console.error(error);
+         });
+
   }
   useEffect(() => {
     search();
