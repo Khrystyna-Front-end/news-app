@@ -32,13 +32,14 @@ function App() {
   function search() {
     let apiKey = "9de3a519457048fd86c3f2e3c8d2ebd0";
     let apiUrl = `https://newsapi.org/v2/top-headlines?country=ua&apiKey=${apiKey}`;
+    
     axios.get(apiUrl).then(showNews);
   }
   useEffect(() => {
     search();
   }, []);
 
-  // if (loaded) {
+  if (loaded) {
     return (
       <div className="App">
         <Header />
@@ -49,10 +50,10 @@ function App() {
         <Footer />
       </div>
     );
-  // } else {
-    // search();
+  } else {
+    search();
     
-    // return "Loading...";
-  // }
+    return "Loading...";
+  }
 }
 export default App;
