@@ -44,7 +44,7 @@ function App() {
       <div className="App">
         <Header />
         <CurrentDateTime date={new Date()} />
-        {/* <FormSearch newsData={news} /> */}
+        <FormSearch newsData={news} />
         <News dailyNews={news} />
 
         <Footer />
