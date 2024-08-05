@@ -48,6 +48,14 @@ function App() {
     );
   } else {
     search();
+    <div className="App">
+      <Header />
+      <CurrentDateTime date={new Date()} />
+      <FormSearch newsData={news} />
+      <News dailyNews={news} />
+
+      <Footer />
+    </div>;
     return "Loading...";
   }
 }
