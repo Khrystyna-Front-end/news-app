@@ -28,7 +28,7 @@ function News(props) {
               </div>
             );
           }
-          return null;
+          // return null;
         })}
       </div>
     );
