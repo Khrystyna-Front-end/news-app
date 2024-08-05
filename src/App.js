@@ -33,7 +33,9 @@ function App() {
     let apiUrl = `https://newsapi.org/v2/top-headlines?country=ua&apiKey=${apiKey}`;
     axios.get(apiUrl).then(showNews);
   }
-
+  useEffect(() => {
+    search();
+  }, []);
 
   if (loaded) {
     return (
@@ -48,14 +50,7 @@ function App() {
     );
   } else {
     search();
-    <div className="App">
-      <Header />
-      <CurrentDateTime date={new Date()} />
-      <FormSearch newsData={news} />
-      <News dailyNews={news} />
-
-      <Footer />
-    </div>;
+    
     return "Loading...";
   }
 }
