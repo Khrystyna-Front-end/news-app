@@ -49,8 +49,7 @@ function App() {
       </div>
     );
   } else {
-    search();
-    
+  
     return "Loading...";
   }
 }
