@@ -4,105 +4,92 @@
   font-family: PoppinsEdu Australia VIC WA NT;
 }
 
-.flex-container-news{
-    display:flex;
+.flex-container-news {
+  display: flex;
   flex-direction: column;
-    text-align:center;
-    justify-content: center;
-    width:fit-content;
-list-style-type: decimal;
+  text-align: center;
+  justify-content: center;
+  width: fit-content;
+  list-style-type: decimal;
   padding: 5px;
   margin: 10px auto;
   background-color: rgb(196, 199, 199);
- width: 75%;
+  width: 75%;
 }
 
 .flex-container-news h1 {
-    font-weight: 700;
-    font-size: 26px;
+  font-weight: 700;
+  font-size: 26px;
 }
 .flex-container-news h2 {
-      font-weight: 600;
-    font-size: 24px;
+  font-weight: 600;
+  font-size: 24px;
 }
 .flex-container-news h3 {
-      font-weight: 400;
-    font-size: 14px;
+  font-weight: 400;
+  font-size: 14px;
 }
 
-.block-news{
-    display: flex;
-    text-align: center;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-   
+.block-news {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
 }
-.block-news-info{
-    flex-grow: 3;
-    padding-left: 30px;
-    margin: 5px 0 5px;
-     width: 70%;
+.block-news-info {
+  flex-grow: 3;
+  padding-left: 30px;
+  margin: 5px 0 5px;
+  width: 70%;
 }
-.block-news-detail{
-    flex-grow: 1;
-    text-align: right;
-        margin: 5px 0 5px;
-        padding-top: 10px;
-         width: 15%;
+.block-news-detail {
+  flex-grow: 1;
+  text-align: right;
+  margin: 5px 0 5px;
+  padding-top: 10px;
+  width: 15%;
 }
-.block-news-link{
-        flex-grow: 1;
-      text-align: right;
-          margin: 5px 0 5px;
-          width: 5%;
+.block-news-link {
+  flex-grow: 1;
+  text-align: right;
+  margin: 5px 0 5px;
+  width: 5%;
 }
 
 .news-link {
   color: #acbdc2;
 }
 
-
-
-
-
-
-
-
 @media screen and (max-width: 1024px) {
-
 }
 @media screen and (max-width: 800px) {
-.block-news-detail{
-      font-size: 8px;
-}
+  .block-news-detail {
+    font-size: 8px;
+  }
 }
 @media screen and (max-width: 420px) {
-   /* * {
-    width: 50%;
-  } */
   h1 {
     font-size: 17px;
     font-weight: 700;
     word-spacing: 0;
-   
   }
-  h2{
+  h2 {
     font-size: 15px;
-     text-align: left;
+    text-align: left;
   }
-  h3{
-      font-size: 13px;
-      font-weight: 400;
+  h3 {
+    font-size: 13px;
+    font-weight: 400;
   }
-  p{
+  p {
     font-size: 8px;
-     text-align: left;
+    text-align: left;
   }
-  li{
-    list-style-type:decimal;
+  li {
+    list-style-type: decimal;
   }
-.block-news-detail{
-      font-size: 8px;
-}
+  .block-news-detail {
+    font-size: 8px;
+  }
 }

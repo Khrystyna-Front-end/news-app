@@ -14,7 +14,7 @@ function App() {
   function showNews(response) {
     console.log(response);
     console.log(response.data.articles);
-  //  setNews(response.data.articles);
+    //  setNews(response.data.articles);
     setNews({
       title: response.data.articles.title,
       author: response.data.articles.author,
@@ -25,33 +25,28 @@ function App() {
       date: new Date(response.data.time * 1000),
       description: response.data.articles.description,
     });
-
     setLoaded(true);
   }
 
   function search() {
     let apiKey = "9de3a519457048fd86c3f2e3c8d2ebd0";
     let apiUrl = `https://newsapi.org/v2/top-headlines?country=ua&apiKey=${apiKey}`;
-       
-       const options = {
-         httpVersion: "HTTP/2.0",
-         // Add other request options as needed
-       };
+    const options = {
+      httpVersion: "HTTP/2.0",
+    };
 
-       axios
-         .get(apiUrl, options)
-         .then(showNews)
-        //  .then((response) => {
-           // Handle successful response
-          //  console.log(response.data);
-        //  })
-        //  .then(showNews)
-         .catch((error) => {
-           // Handle error
-           console.error(error);
-         });
-
+    axios
+      .get(apiUrl, options)
+      .then(showNews)
+      //  .then((response) => {
+      //  console.log(response.data);
+      //  })
+      //  .then(showNews)
+      .catch((error) => {
+        console.error(error);
+      });
   }
+
   useEffect(() => {
     search();
   }, []);
@@ -63,13 +58,11 @@ function App() {
         <CurrentDateTime date={new Date()} />
         <FormSearch newsData={news} />
         <News dailyNews={news} />
-
         <Footer />
       </div>
     );
   } else {
     search();
-    
     return "Loading...";
   }
 }
