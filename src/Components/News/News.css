@@ -1,9 +1,15 @@
-.news{
-    border:2px solid rgb(92, 90, 90);
-    width: max-content;
+.dailyNews {
+  cursor: pointer;
+  transition: scale 1s ease-in;
+  opacity: 0.25s ease-in;
+  filter: 0.5s ease-in;
+  &:hover {
+    scale: 0.9;
+  }
 }
 
-.dailyNews{
-    border:2px solid rgb(92, 90, 90);
-    
+.news:has(.dailyNews:hover) .dailyNews:not(:hover) {
+  scale: 1;
+  opacity: 0.9;
+  filter: blur(0.1px);
 }
