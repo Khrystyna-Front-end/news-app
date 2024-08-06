@@ -1,9 +1,10 @@
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import  "./DailyNews.css"
 
 function DailyNews(props) {
-  console.log(props);
-  console.log(props.data);
+  // console.log(props);
+  // console.log(props.data);
   const formatDate = (dateString) => {
     const options = {
       day: "numeric",
