@@ -1,4 +1,5 @@
 import React from "react";
+import './CurrentDateTime.css'
 
 export default function CurrentDateTime(props) {
   let days = [
@@ -22,7 +23,7 @@ export default function CurrentDateTime(props) {
     minutes = `0` + minutes;
   }
   return (
-    <div>
+    <div className="currentDate">
       {day} {hours}:{minutes}
     </div>
   );
