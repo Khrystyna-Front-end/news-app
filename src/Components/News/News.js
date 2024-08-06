@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DailyNews from "../DailyNews/DailyNews";
+import './News.css';
 
 function News(props) {
   console.log(props.data);
@@ -19,7 +20,7 @@ function News(props) {
 
   if (loaded) {
     return (
-      <div className="News">
+      <div className="news">
         {news.map(function (dailyNews, index) {
           if (index < 7) {
             return (
